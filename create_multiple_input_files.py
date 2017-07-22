@@ -8,11 +8,11 @@ N = load('N.npy')
 print 'N ',N
 
 W = 8.
-l = 0.3
 
 omegas = load('omegas.npy')
 betas  = load('betas.npy')
 mu_map = load('mu_map.npy')
+l      = load('lamb.npy')
 
 print shape(mu_map)
 
