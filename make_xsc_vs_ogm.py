@@ -9,12 +9,13 @@ dirpath  = sys.argv[1]
 
 folders = os.listdir(dirpath)
 
-dens = load('results/dens_ogm.npy')
-betas = load('betas.npy')
+dens = load('../results/dens_ogm.npy')
+betas = load('../betas.npy')
 
 x_ogm     = zeros(shape(dens))
 x_ogm_std = zeros(shape(dens))
 
+N = load('../N.npy')
 
 def get_xsc(folder, myfiles, beta, N, density):
      files = []
@@ -154,7 +155,6 @@ for folder in folders:
   '''
 
 
-  N = 64
 
   #print shape(betas)
   #print shape(dens)
@@ -167,8 +167,8 @@ for folder in folders:
 
 
 print 'saving files'
-save('results/x_ogm', x_ogm)
-save('results/x_ogm_std', x_ogm_std)
+save('../results/x_ogm', x_ogm)
+save('../results/x_ogm_std', x_ogm_std)
 
 #vertex_ogm = load('vertex_ogm.npy')
 #print 'rel difference',(x_ogm - vertex_ogm[:,:,:,0])/(x_ogm + vertex_ogm[:,:,:,0])

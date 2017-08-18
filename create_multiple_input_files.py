@@ -4,15 +4,15 @@ import subprocess, os, time, sys
 ##first get a sense of where mu is with sdev
 #apparently mu should be around -lambda*W = -N*g^2/omega^2  where N is the total N
 
-N = load('N.npy')
+N = load('../N.npy')
 print 'N ',N
 
 W = 8.
 
-omegas = load('omegas.npy')
-betas  = load('betas.npy')
-mu_map = load('mu_map.npy')
-l      = load('lamb.npy')
+omegas = load('../omegas.npy')
+betas  = load('../betas.npy')
+mu_map = load('../mu_map.npy')
+l      = load('../lamb.npy')
 
 print shape(mu_map)
 
@@ -102,3 +102,4 @@ for i in range(len(omegas)):
             
 
 #save mumap....
+

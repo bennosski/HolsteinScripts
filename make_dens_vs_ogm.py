@@ -9,15 +9,16 @@ from numpy import *
 dirpath = sys.argv[1]
 folders = os.listdir(dirpath)
 
-omegas = load('omegas.npy')
-save('results/omegas.npy', omegas)
+omegas = load('../omegas.npy')
+save('../results/omegas.npy', omegas)
 
-betas = load('betas.npy')
-save('results/betas.npy', betas)
+betas = load('../betas.npy')
+save('../results/betas.npy', betas)
 
-mu_map = load('mu_map.npy')
-save('results/mu_map.npy', mu_map)
+mu_map = load('../mu_map.npy')
+save('../results/mu_map.npy', mu_map)
 print shape(mu_map)
+
 
 dens_ogm = zeros(shape(mu_map))
 dens_ogm_std = zeros(shape(mu_map))
@@ -69,5 +70,5 @@ for folder in folders:
 
 
 print 'saving files'
-save('results/dens_ogm', dens_ogm)
-save('results/dens_ogm_std', dens_ogm_std)
+save('../results/dens_ogm', dens_ogm)
+save('../results/dens_ogm_std', dens_ogm_std)

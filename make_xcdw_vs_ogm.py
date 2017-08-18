@@ -6,16 +6,18 @@ import numpy as np
 #dirpath = 'outputfiles2/'
 dirpath = sys.argv[1]
 
-N = 64
+N = load('../N.npy')
+Nm = sqrt(N)/2+1
 
 folders = os.listdir(dirpath)
 
-dens = load('results/dens_ogm.npy')
+dens = load('../results/dens_ogm.npy')
 [d1,d2,d3] = shape(dens)
-x_ogm     = zeros([5,5,d1,d2,d3])
-x_ogm_std = zeros([5,5,d1,d2,d3])
 
-betas = load('betas.npy')
+x_ogm     = zeros([Nm,Nm,d1,d2,d3])
+x_ogm_std = zeros([Nm,Nm,d1,d2,d3])
+
+betas = load('../betas.npy')
 
 
 def get_xcdw2(folder, myfiles, beta, N):
@@ -232,5 +234,5 @@ for folder in folders:
 
 
 print('saving files')
-save('results/xcdw_full_ogm', x_ogm)
-save('results/xcdw_full_ogm_std', x_ogm_std)
+save('../results/xcdw_full_ogm', x_ogm)
+save('../results/xcdw_full_ogm_std', x_ogm_std)
