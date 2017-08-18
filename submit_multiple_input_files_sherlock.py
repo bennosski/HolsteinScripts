@@ -65,7 +65,7 @@ for count in range(start, end):
                 #files = glob.glob(output_folder_name+'/*Gtau0_u.dat')
                 files = glob.glob(output_folder_name+'/*')
                 #print output_folder_name+'len ',len(files)
-                if len(files)<250:
+                if len(files)<50:
                     print output_folder_name+' len ',len(files),' submitting'
                 else:
                     continue

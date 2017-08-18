@@ -58,7 +58,7 @@ for count in range(start, end):
             input_file_name = sys.argv[1]+'input'+label
             output_folder_name = sys.argv[2]+'output'+label
             
-            '''
+            
             if os.path.exists(output_folder_name):
                 files = glob.glob(output_folder_name+'/*Gtau0_u.dat')
                 #print output_folder_name+'len ',len(files)
@@ -66,7 +66,7 @@ for count in range(start, end):
                     print output_folder_name+' len ',len(files),' submitting'
                 else:
                     continue
-            '''
+            
      
             '''    
             if j>1:
