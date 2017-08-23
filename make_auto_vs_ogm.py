@@ -11,7 +11,7 @@ folders = os.listdir(dirpath)
 #txtf.close()
 #folders = os.listdir(dirpath)
 
-mu_map = load('mu_map.npy')
+mu_map = load('../mu_map.npy')
 auto_ogm = zeros(shape(mu_map))
 
 [d1,d2,d3] = shape(mu_map)
@@ -26,7 +26,7 @@ if len(sys.argv)>3:
       auto_ogm[i1,i2,i3] = a
 
   print 'saving files'
-  save('results/auto_ogm_'+quantity, auto_ogm)
+  save('../results/auto_ogm_'+quantity, auto_ogm)
   exit()
 
 
@@ -56,7 +56,7 @@ if start==(d1-1,d2-1,d3-1):
       auto_ogm[i1,i2,i3] = a
 
   print 'saving files'
-  save('results/auto_ogm_'+quantity, auto_ogm)
+  save('../results/auto_ogm_'+quantity, auto_ogm)
   exit()
 
 print 'making new auto_checkpoint.txt'
